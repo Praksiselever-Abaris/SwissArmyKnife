@@ -1,0 +1,7 @@
+<html>
+<h1>Utilities front page</h1>
+<ul>
+  <li><a href="mva/index.html">MVA calculator</a></li>
+  <li><a href="calc/index.html">Regular calculator</a></li>
+</ul>
+</html>
