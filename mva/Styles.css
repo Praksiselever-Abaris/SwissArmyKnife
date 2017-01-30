@@ -8,6 +8,9 @@
    font-family: 'Passion One', cursive;
  }
 
+ h1 {
+   font-size:36px;
+ }
 
  * {
   box-sizing: border-box;

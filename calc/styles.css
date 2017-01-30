@@ -1,8 +1,16 @@
-body {
-  background-image:url(http://orig03.deviantart.net/608e/f/2013/069/d/0/start_background_1080p__windows_8__by_zaktech90-d5xn0lk.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+@import 'https://fonts.googleapis.com/css?family=Anton|Lobster|Passion+One';
+
+ body {
+   font-size: 26px;
+   background-image:url(http://orig03.deviantart.net/608e/f/2013/069/d/0/start_background_1080p__windows_8__by_zaktech90-d5xn0lk.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: 'Passion One', cursive;
+ }
+
+ h1 {
+   font-size:36px;
+ }
 
 * {
  box-sizing: border-box;
