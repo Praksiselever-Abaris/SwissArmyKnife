@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <script src="javascript.js"></script>
+    <title>Simple Polygon</title>
     <link rel="stylesheet" type="text/css" href="Styles.css">
-    <title> Kart </title>
   </head>
   <body>
     <script>
-  function initMap() {
-    var uluru = {lat: 64, lng: 12};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
-</script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5,
+          center: {lat: 65.332, lng: 15},
+          mapTypeId: 'terrain'
+        });
+
+        // Define the LatLng coordinates for the polygon's path.
+        var nordland = [
+          {lat:65.126380, lng:14.314855},
+          {lat:65.110201, lng:13.084386},
+          {lat:64.940894, lng:12.765782},
+          {lat:64.974899, lng:12.197927},
+          {lat:65.226986, lng:10.835622},
+          {lat:67.236107, lng:13.296559},
+          {lat:68.251239, lng:15.471852},
+          {lat:67.523443, lng:12.044118},
+          {lat:69.765810, lng:16.416677},
+          {lat:68.662713, lng:15.911305},
+          {lat:68.550504, lng:18.108571}
+        ];
+
+        // Construct the polygon.
+        var Fylker = new google.maps.Polygon({
+          paths: nordland,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        Fylker.setMap(map);
+      }
+    </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCotYZTjzl4sBgPp2_6GfNYfhJen-F8eRY&callback=initMap">
     </script>
 
- <center>  <h1>Oversikt over fylker</h1></center>
+    <center>  <h1>Oversikt over fylker</h1></center>
 
-    <nav>
-      <ul>
-        <li class="nav"><a href="../index.html">Hjem</a></li>
-        <li class="nav"><a href="../calc/index.html">Kalkulator</a></li>
-        <li class="nav"><a href="../mva/index.html">Mva Kalkulator</a></li>
-        <li class="nav"><a href="../Toll/index.html">Toll Kalkulator</a></li>
-        <li class="nav"><a href="../Spill/index.html">Spill</a></li>
-        <li Class="nav"><a href="Index.html">Kart</a></li>
-        <li class="nav"><a href="../Fredag/Index.html">Fredag?</a></li>
-    </ul>
-  </nav>
-<center>
-    <div id="map"></div>
-</center>
+       <nav>
+         <ul>
+           <li class="nav"><a href="../index.html">Hjem</a></li>
+           <li class="nav"><a href="../calc/index.html">Kalkulator</a></li>
+           <li class="nav"><a href="../mva/index.html">Mva Kalkulator</a></li>
+           <li class="nav"><a href="../Toll/index.html">Toll Kalkulator</a></li>
+           <li class="nav"><a href="../Spill/index.html">Spill</a></li>
+           <li Class="nav"><a href="Index.html">Kart</a></li>
+           <li class="nav"><a href="../Fredag/Index.html">Fredag?</a></li>
+       </ul>
+     </nav>
+
+   <center><div id="map"></div></center>
+
   </body>
 </html>
