@@ -1,13 +1,13 @@
-async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOzipiV0ILvsaE3SitPsolKF_SATaW5hI&callback=initMap"
 
-function initMap() {
-  var Norway = {lat: 62.00, lng: 10.000};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: Norway
-  });
-  var marker = new google.maps.Marker({
-    position: Norway,
-    map: map
-  });
-}
+  function initMap() {
+   var uluru = {lat: -25.363, lng: 131.044};
+    var map = new google.maps.Map(document.getElementById('map'), {
+     zoom: 4,
+     center: uluru
+     });
+   var marker = new google.maps.Marker({
+     position: uluru,
+     map: map
+   });
+ }
