@@ -1,3 +1,4 @@
+/*Scripteruni peperuni*/
 function erdetfredag() {
 var d = new Date();
 var weekday = new Array(7);
