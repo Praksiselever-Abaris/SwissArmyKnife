@@ -21,7 +21,12 @@ function teller() {
   }
 
   else {
-    document.getElementById("sjanser").innerHTML = "Wut, bruk ælle sjansæn da"
+    if (forsok >= 1) {
+          document.getElementById("sjanser").innerHTML = "Wut, bruk ælle sjansæn da"
+    }
+    else {
+
+    }
   }
 }
 
@@ -37,6 +42,7 @@ function restart() {
 
 function gjett() {
  var tall = parseInt(document.getElementById("boks").value);
+ document.getElementById("sjanser").innerHTML = "";
 if (forsok <= 0) {
   document.getElementById("ting").innerHTML = "Du greidde d ikkje nub";
   document.getElementById("gjett").disabled = true;

@@ -1,0 +1,55 @@
+@import 'https://fonts.googleapis.com/css?family=Anton|Lobster|Passion+One';
+
+ body {
+   font-size: 26px;
+   background-image:url(http://orig03.deviantart.net/608e/f/2013/069/d/0/start_background_1080p__windows_8__by_zaktech90-d5xn0lk.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: 'Passion One', cursive;
+ }
+
+h1 {
+  font-size:36px;
+}
+
+#map {
+ height: 550px;
+ width: 45%;
+ top:60px;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+ul {
+margin-top: 180px;
+list-style-type: none;
+margin: 0;
+padding: 0;
+background-color: #333;
+position:absolute;
+width:100%;
+left:0;
+}
+
+.nav {
+   float:left;
+  position: static;
+  top:0px;
+  left:0px;
+  right:0px;
+ }
+
+ .nav a {
+   display:block;
+   color: white;
+   text-align: center;
+   padding: 12px 20px;
+   text-decoration: none;
+
+ }
+
+ .nav a:hover {
+   background-color: #111;
+ }
