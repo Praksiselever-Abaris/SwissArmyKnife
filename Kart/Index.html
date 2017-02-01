@@ -9,16 +9,58 @@
   <body>
     <script>
   function initMap() {
-    var uluru = {lat: 64, lng: 12};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 5,
+    center: {lat: 64, lng: 12},
+    mapTypeId: 'terrain'
+  });
+
+  // Define the LatLng coordinates for the polygon's path.
+  var triangleCoords = [
+    {lat: 62.372604, lng: 9.062076},
+    {lat: 62.381849, lng: 9.104735},
+    {lat: 62.398311, lng: 9.141907},
+    {lat: 62.427002, lng: 9.184036},
+    {lat: 62.447738, lng: 9.198905},
+    {lat: 62.458339, lng: 9.184036},
+    {lat: 62.499563, lng: 9.207578},
+    {lat: 62.500650, lng: 9.210795},
+    {lat: 62.506926, lng: 9.212910},
+    {lat: 62.513619, lng: 9.211550},
+    {lat: 62.519893, lng: 9.205962},
+    {lat: 62.522123, lng: 9.207925},
+    {lat: 62.519753, lng: 9.218498},
+    {lat: 62.521078, lng: 9.223030},
+    {lat: 62.524283, lng: 9.220311},
+    {lat: 62.539889, lng: 9.230129},
+    {lat: 62.536337, lng: 9.237681},
+    {lat: 62.543441, lng: 9.237077},
+    {lat: 62.549360, lng: 9.238738},
+    {lat: 62.552841, lng: 9.242816},
+    {lat: 62.557018, lng: 9.243269},
+    {lat: 62.560011, lng: 9.236926},
+    {lat: 62.568224, lng: 9.231639},
+    {lat: 62.570381, lng: 9.223181},
+    {lat: 62.574764, lng: 9.221066},
+    {lat: 62.572120, lng: 9.200977},
+    {lat: 62.574416, lng: 9.196144},
+    {lat: 62.577268, lng: 9.195691},
+    {lat: 62.573929, lng: 9.172128},
+    {lat: 62.575599, lng: 9.171373},
+    {lat: 62.573024, lng: 9.152039},
+  ];
+
+  // Construct the polygon.
+  var bermudaTriangle = new google.maps.Polygon({
+    paths: triangleCoords,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  });
+  bermudaTriangle.setMap(map);
+}
 </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCotYZTjzl4sBgPp2_6GfNYfhJen-F8eRY&callback=initMap">
