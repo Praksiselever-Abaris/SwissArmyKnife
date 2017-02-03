@@ -6,6 +6,16 @@
     <title>Kart</title>
     <link rel="stylesheet" type="text/css" href="Styles.css">
     <script src="jquery.js"></script>
+    <script>
+    $('oppland').on('mouseenter', function() {
+    this.iid = setInterval(function() {
+       strokeColor: '#FF0001',
+       fillcolor: "#FF0001"
+    }, 25);
+}).on('mouseleave', function(){
+    this.iid && clearInterval(this.iid);
+});
+    </script>
   </head>
   <body>
     <script>
